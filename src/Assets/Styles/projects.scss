@@ -1,0 +1,176 @@
+@import 'variables.scss';
+@import 'button.scss';
+
+
+.projects {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding;
+    gap: 5rem;
+
+    .box {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        .title {
+
+            display: flex;
+            color: $font-color;
+
+            font: {
+                size: 2.4rem;
+                style: normal;
+                weight: 600;
+            }
+
+            line-height: normal;
+        }
+
+        .row {
+
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+
+            .project-year {
+
+                display: flex;
+                width: 6.2rem;
+                height: 2.5rem;
+                flex-shrink: 0;
+                border-radius: $radius;
+                background: $font-color;
+                color: #FFF;
+
+                font: {
+
+                    size: $font-text;
+                    style: normal;
+                    weight: 900;
+                }
+
+                align-items: center;
+                justify-content: center;
+                margin-left: 0.8rem;
+
+            }
+
+            .project-name {
+
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                color: #8695A4;
+
+                font: {
+
+                    size: $font-text;
+                    style: normal;
+                    weight: 400;
+                    height: normal;
+                }
+            }
+        }
+
+        .description {
+
+            display: flex;
+            width: 60rem;
+            height: 9.3rem;
+            flex-shrink: 0;
+
+            p {
+                color: $font-color;
+
+                font: {
+
+                    size: $font-text;
+                    style: normal;
+                    weight:500;
+                }
+
+                line-height: normal;
+            }
+        }
+
+        .cards {
+
+            display: flex;
+
+            .card {
+
+                display: flex;
+                width: 60rem;
+
+                .card-image {
+
+                    display: flex;
+                    gap: 2rem;
+
+                }
+
+                .card-body {
+
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .title {
+                        display: flex;
+                        font-size: 2rem;
+                    }
+
+                    .text {
+
+                        display: flex;
+                        font-size: 1.4rem;
+                       //text-align:justify;
+                       // hyphens:auto;
+                       
+                    }
+
+                    .card-btn {
+
+                        @include btn-small;
+
+                        .icons {
+
+                            color: #FFF;
+                            font-size: 1.6rem;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .projects {
+      
+        .box {
+
+            .cards {
+
+                .card {
+
+                    display: flex;
+                    width:auto;
+                                        
+                }
+            }
+
+        }
+    }
+}

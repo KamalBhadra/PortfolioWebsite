@@ -1,0 +1,171 @@
+@import 'variables';
+@import 'button';
+
+.about {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: $padding;
+    background-color: transparent;
+
+    .hero-about {
+
+        width: 100%;
+
+    }
+
+
+
+    .card {
+
+        display: flex;
+        width: auto;
+        background-color: #f8fbFF;
+        background-color: transparent;
+        padding: 1rem;
+        padding-left: 0rem;
+        margin-left: 3rem;
+        border-style: none;
+        gap: 1rem;
+
+        .card-header {
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #f8fbFF;
+
+            font: {
+
+                size: $font-text;
+                weight: 600;
+            }
+
+            text-transform:uppercase;
+            color:$font-color;
+            background-color: transparent;
+            gap: 1rem;
+
+            .icons {
+
+                display: flex;
+                @extend .card-header;
+                align-items: center;
+                justify-content: center;
+                color: rgb(72, 151, 167);
+                font-weight: 700;
+            }
+
+        }
+
+        .card-body {
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .card-title {
+
+                display: flex;
+                color: $font-color;
+                font-weight: 700;
+                color: rgb(72, 151, 167);
+                font-size: $font-text;
+            }
+
+            .card-text {
+
+                display: flex;
+                color: $font-color;
+                font-size: $font-text;
+                font-style: normal;
+                font-weight:400;
+                line-height: normal;
+               // text-align:justify;
+            }
+
+            .card-btn {
+
+                @include btn-small;
+
+                .icons {
+
+                    color: #FFF;
+
+                    font: {
+                        size: 2rem;
+                        weight: 700;
+                    }
+
+                    line-height: normal;
+                }
+            }
+
+            #linkedin-btn {
+
+                background-color: #0A66c2;
+            }
+
+            #github-btn {
+
+                background-color: #171515;
+            }
+
+            .buttons {
+
+                display: flex;
+                gap: 2rem;
+            }
+
+        }
+
+    }
+}
+
+
+//media queries for mobile devices
+@media only screen and (max-width: 767px) {
+
+    .about {
+
+        .card {
+
+            .card-body {
+
+                display: flex;
+                flex-direction: column;
+
+                .card-text {
+
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: auto;
+                    //text-align:justify;
+                    //font-size:1.4rem;
+                    
+                    
+                }
+
+                .buttons {
+
+                    display:flex;
+                    flex-direction:column;
+                    
+                    .card-btn {
+
+                        display: flex;
+                        flex-wrap: wrap;
+                        @include btn-small;
+
+                        
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}

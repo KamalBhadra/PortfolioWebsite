@@ -1,0 +1,70 @@
+@mixin btn-large {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+    width: 26rem;
+    background-color: #FF6464;
+    padding: 1.6rem 1rem 1.6rem 1rem;
+    color: #FFF;
+
+    font: {
+
+        size: 1.6rem;
+        style: normal;
+        weight: 400;
+
+    }
+
+    line-height: normal;
+    border-style: none;
+    cursor: pointer;
+    gap:0.7rem;
+    animation: fadeIn 0.7s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.1) translateX(1rem); 
+    }
+
+}
+
+@mixin btn-small {
+
+    display: flex;
+    width: 17rem;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+    background-color: #FF6464;
+    border-radius: 4rem;
+    border-style: none;
+    transition: transform 0.3s ease-in-out;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.1) translateX(0.7rem); 
+    }
+}

@@ -1,0 +1,216 @@
+@import 'variables.scss';
+
+.nav-bar {
+
+    display: flex;
+    padding: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f8fbFF;
+
+    .nav-link {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            gap: 4rem;
+            cursor: pointer;
+            width: auto;
+
+        }
+
+        li {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: $font-color;
+
+            &:hover {
+                
+                transform: translateX(0.5rem) scale(1.1); 
+                transition: transform 0.3s ease; 
+            }
+
+            &.active-link {
+
+                color: teal;
+                border-radius:4rem;
+                border: $border;
+                transition: all 0.3s ease;
+            }
+
+            font: {
+                size: $font-text;
+                style: normal;
+                weight: 500;
+            }
+
+            line-height: normal;
+            text-transform: uppercase;
+            padding:1rem;
+
+            .icons {
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font: {
+                    size: 2.4rem;
+                    weight: 500;
+                }
+
+                line-height: normal;
+                height: 2.4rem;
+                width: 2.4rem;
+            }
+
+            .icon-image {
+
+                display: flex;
+                height: 2rem;
+                width: 2rem;
+
+            }
+
+        }
+
+
+
+
+    }
+
+    .mobile-nav {
+
+        display: flex;
+
+        .nav-container {
+
+            .nav-btn {
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 5rem;
+                width: 5rem;
+                
+
+            }
+
+            .canvas {
+
+                display: flex;
+                width: 24rem;
+
+                .canvas-body {
+
+                    display: flex;
+                    // background-color: yellowgreen;
+                    justify-content: flex-start;
+
+                    .canvas-nav {
+
+                        display: flexbox;
+                        //   background-color: grey;
+                        width: 20rem;
+
+                        .canvas-item {
+
+                            display: flex;
+                            //     background-color: blue;
+
+
+                            .nav-link {
+
+                                display: flex;
+                                justify-content:flex-start;
+                                align-items: center;
+                                //background-color: yellow;
+                                width: 19rem;
+                                height: auto;
+                                gap: 2rem;
+                                padding: 2rem;
+                                padding-left:1rem;
+
+                                &.active-link {
+
+                                    color: teal;
+                                    //text-decoration:underline;
+                                    //border-radius:4rem;
+                                    //border: $border;
+                                }
+
+                                .icons {
+
+                                    display: flex;
+                                    height: 3rem;
+                                    width: 3rem;
+
+                                }
+
+                                span {
+
+                                    display: flex;
+
+
+                                    font: {
+
+                                        size: $font-text;
+                                        color: $font-color;
+
+                                    }
+                                }
+
+                                .icon-image {
+
+                                    display: flex;
+                                    height: 3rem;
+                                    width: 3rem;
+
+                                }
+
+
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .nav-bar {
+
+        .nav-link {
+
+            ul {
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .nav-bar {
+
+        .mobile-nav {
+
+            display: none;
+        }
+    }
+}

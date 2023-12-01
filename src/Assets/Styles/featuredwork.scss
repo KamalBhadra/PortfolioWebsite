@@ -1,0 +1,224 @@
+@import 'variables';
+@import 'button';
+
+.featured-work {
+
+    display: flex;
+    flex-direction: column;
+    padding: $padding;
+    gap: 5rem;
+    color: $font-color;
+
+    .title {
+
+        font: {
+
+            size: 2.4rem;
+            style: normal;
+            weight: 600;
+
+        }
+
+        line-height: 0.6rem;
+
+    }
+
+    .box {
+
+        display: flex;
+        gap: 5rem;
+        border-bottom: $border;
+        padding-bottom: 3rem;
+
+
+
+        .box-left {
+
+            display: flex;
+            width: 40rem;
+            height: 30rem;
+            flex-shrink: 0;
+            border-radius: $radius;
+
+            img {
+
+                display: flex;
+                width: 40rem;
+                height: 30rem;
+                border-radius: $radius;
+            }
+        }
+
+        .box-right {
+
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .heading {
+
+                display: flex;
+
+                font: {
+
+                    size: 3rem;
+                    style: normal;
+                    weight: 600;
+
+                }
+
+                line-height: normal;
+            }
+
+            .row {
+
+                display: flex;
+                gap: 1rem;
+
+                .project-year {
+
+                    display: flex;
+                    width: 6.2rem;
+                    height: 2.5rem;
+                    flex-shrink: 0;
+                    border-radius: $radius;
+                    background: $font-color;
+                    color: #FFF;
+
+
+                    font: {
+
+                        size: 1.6rem;
+                        style: normal;
+                        weight: 900;
+                    }
+
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 0.8rem;
+
+                }
+
+                .project-name {
+
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+                    color: #8995A4;
+
+                    font: {
+
+                        size: 1.6rem;
+                        style: normal;
+                        weight: 400;
+                    }
+
+                    line-height: normal;
+                }
+            }
+
+            .description {
+
+                display: flex;
+                width: 60rem;
+                flex-wrap: wrap;
+                height: auto;
+                //flex-shrink: 0;
+
+                p {
+
+                    display: flex;
+                    text-align: justify;
+                    
+
+
+                    font: {
+
+                        size: 1.6rem;
+                        style: normal;
+                        weight: 400;
+
+                    }
+
+                    line-height: normal;
+                }
+            }
+
+            button {
+
+                display: flex;
+                @include btn-small;
+                color: white;
+
+                .icons {
+
+                    display: flex;
+                    color: #FFF;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: normal;
+
+                }
+            }
+
+        }
+    }
+}
+
+//media queries for mobile devices
+@media only screen and (max-width: 767px) {
+
+    .featured-work {
+
+
+        .box {
+
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+
+            .box-left {
+
+                display: flex;
+                width: 100%;
+                height: auto;
+                flex-shrink: 0;
+                border-radius: $radius;
+                transition: transform 0.3s ease-in-out;
+
+                   
+                img {
+
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                    border-radius: $radius;
+                    
+                }
+            }
+
+            .box-right {
+
+
+
+                .description {
+
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    height: auto;
+
+                    p {
+
+                        text-align: left;
+                        hyphens: auto;
+                    }
+
+
+                }
+
+            }
+        }
+    }
+}
